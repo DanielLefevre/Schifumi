@@ -20,7 +20,7 @@ bool Coup::operator== (const Coup& b) {
 }
 
 std::ostream& operator<<(std::ostream& out, const Coup& coup) {
-    out << coup.getType() << std::endl;
+    out << coup.getType();
     return out;
 }
 
