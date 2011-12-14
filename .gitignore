@@ -1,0 +1,8 @@
+*.cproject
+*.project
+Debug/
+*.cbp
+*.depend
+*.layout
+bin/
+obj/
