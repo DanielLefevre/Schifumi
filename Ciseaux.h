@@ -13,7 +13,7 @@
 class Ciseaux : private Coup {
 public:
 	Ciseaux();
-	virtual std::string type();
+	virtual std::string type() const;
 	virtual ~Ciseaux();
 };
 

@@ -15,15 +15,39 @@ Coup::~Coup() {
 	// TODO Auto-generated destructor stub
 }
 
-std::string Coup::type() {
-    return std::string("Coup");
+bool Coup::operator== (const Coup& b) {
+    return (*this == b);
 }
 
-bool Coup::operator== (const Coup& a, const Coup& b) {
-    return (a == b);
+Coup& Coup::operator<<(const Coup& coup) {
+    *this = coup;
+    return *this;
 }
 
-std::ostream& Coup::operator<<(std::ostream& out, const Coup& coup) {
-    out << std::endl;
+std::ostream& operator<<(std::ostream& out, const Coup& coup) {
+    out << coup.type() << std::endl;
     return out;
+}
+
+bool Coup::operator<(const Coup& coup) {
+    if(this->type() == "Ciseaux" ) {
+        if(coup.type() == "Pierre") {
+            return true;
+        } else if (coup.type() == "Feuille") {
+            return false;
+        }
+    } else if(this->type() == "Feuille") {
+        if(coup.type() == "Ciseaux") {
+            return true;
+        } else if (coup.type() == "Pierre") {
+            return false;
+        }
+    } else if(this->type() == "Pierre") {
+        if(coup.type() == "Feuille") {
+            return true;
+        } else if (coup.type() == "Ciseaux") {
+            return false;
+        }
+    }
+    return false;
 }

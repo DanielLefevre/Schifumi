@@ -16,7 +16,7 @@ Ciseaux::~Ciseaux() {
 	// TODO Auto-generated destructor stub
 }
 
-std::string Ciseaux::type() {
+std::string Ciseaux::type() const {
     return std::string("Ciseaux");
 }
 

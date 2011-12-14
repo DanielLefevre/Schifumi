@@ -13,7 +13,7 @@
 class Feuille : private Coup {
 public:
 	Feuille();
-	virtual std::string type();
+	virtual std::string type() const ;
 	virtual ~Feuille();
 };
 

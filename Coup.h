@@ -13,10 +13,13 @@
 class Coup {
 public:
 	Coup();
-	virtual std::string type();
+	virtual std::string type() const = 0;
 	virtual ~Coup();
-	bool operator==(const Coup&, const Coup&);
-	std::ostream& operator<<(std::ostream&, const Coup&);
+	bool operator==(const Coup&);
+	Coup& operator<<(const Coup&);
+	bool operator<(const Coup&);
 };
+
+std::ostream& operator<<(std::ostream&, const Coup&);
 
 #endif /* COUP_H_ */

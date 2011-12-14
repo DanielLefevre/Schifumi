@@ -16,6 +16,6 @@ Pierre::~Pierre() {
 	// TODO Auto-generated destructor stub
 }
 
-std::string Pierre::type() {
+std::string Pierre::type() const {
     return std::string("Pierre");
 }

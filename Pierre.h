@@ -13,7 +13,7 @@
 class Pierre : private Coup {
 public:
 	Pierre();
-	virtual std::string type();
+	virtual std::string type() const ;
 	virtual ~Pierre();
 };
 

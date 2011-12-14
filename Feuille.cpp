@@ -16,6 +16,6 @@ Feuille::~Feuille() {
 	// TODO Auto-generated destructor stub
 }
 
-std::string Feuille::type() {
+std::string Feuille::type() const {
     return std::string("Feuille");
 }
