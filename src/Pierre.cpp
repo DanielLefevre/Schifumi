@@ -5,17 +5,16 @@
  *      Author: Daniel
  */
 
-#include "Pierre.h"
+#include "../include/Pierre.h"
 
-Pierre::Pierre() {
-	// TODO Auto-generated constructor stub
+std::string Pierre::type = "Pierre";
 
+Pierre::Pierre(Joueur* lanceur) : Coup(lanceur) {
 }
 
 Pierre::~Pierre() {
-	// TODO Auto-generated destructor stub
 }
 
-std::string Pierre::type() const {
-    return std::string("Pierre");
+std::string Pierre::getType() const {
+    return this->type;
 }

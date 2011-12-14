@@ -8,13 +8,15 @@
 #ifndef PIERRE_H_
 #define PIERRE_H_
 
-#include "Coup.h"
+#include "../include/Coup.h"
 
-class Pierre : private Coup {
+class Pierre : public Coup {
 public:
-	Pierre();
-	virtual std::string type() const ;
+	Pierre(Joueur*);
+	virtual std::string getType() const ;
 	virtual ~Pierre();
+private:
+    static std::string type;
 };
 
 #endif /* PIERRE_H_ */

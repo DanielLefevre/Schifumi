@@ -5,17 +5,16 @@
  *      Author: Daniel
  */
 
-#include "Feuille.h"
+#include "../include/Feuille.h"
 
-Feuille::Feuille() {
-	// TODO Auto-generated constructor stub
+std::string Feuille::type = "Feuille";
 
+Feuille::Feuille(Joueur* lanceur) : Coup(lanceur) {
 }
 
 Feuille::~Feuille() {
-	// TODO Auto-generated destructor stub
 }
 
-std::string Feuille::type() const {
-    return std::string("Feuille");
+std::string Feuille::getType() const {
+    return this->type;
 }

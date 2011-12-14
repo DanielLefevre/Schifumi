@@ -8,13 +8,15 @@
 #ifndef FEUILLE_H_
 #define FEUILLE_H_
 
-#include "Coup.h"
+#include "../include/Coup.h"
+#include <string>
 
-class Feuille : private Coup {
+class Feuille : public Coup {
 public:
-	Feuille();
-	virtual std::string type() const ;
+	Feuille(Joueur*);
+	virtual std::string getType() const;
 	virtual ~Feuille();
+private:
+    static std::string type;
 };
-
 #endif /* FEUILLE_H_ */

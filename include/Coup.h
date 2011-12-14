@@ -9,15 +9,18 @@
 #define COUP_H_
 
 #include <iostream>
+#include "../include/Joueur.h"
 
 class Coup {
 public:
-	Coup();
-	virtual std::string type() const = 0;
+	Coup(Joueur* lanceur);
+	virtual std::string getType() const = 0;
 	virtual ~Coup();
 	bool operator==(const Coup&);
-	Coup& operator<<(const Coup&);
 	bool operator<(const Coup&);
+	Joueur* getAuteurCoup();
+private:
+    Joueur* auteurCoup;
 };
 
 std::ostream& operator<<(std::ostream&, const Coup&);

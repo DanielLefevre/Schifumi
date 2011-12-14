@@ -5,18 +5,16 @@
  *      Author: Daniel
  */
 
-#include "Ciseaux.h"
+#include "../include/Ciseaux.h"
 
-Ciseaux::Ciseaux() {
-	// TODO Auto-generated constructor stub
+std::string Ciseaux::type = "Ciseaux";
 
+Ciseaux::Ciseaux(Joueur* lanceur) : Coup(lanceur) {
 }
 
 Ciseaux::~Ciseaux() {
-	// TODO Auto-generated destructor stub
 }
 
-std::string Ciseaux::type() const {
-    return std::string("Ciseaux");
+std::string Ciseaux::getType() const {
+    return this->type;
 }
-

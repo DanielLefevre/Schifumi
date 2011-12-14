@@ -8,13 +8,14 @@
 #ifndef CISEAUX_H_
 #define CISEAUX_H_
 
-#include "Coup.h"
+#include "../include/Coup.h"
 
-class Ciseaux : private Coup {
+class Ciseaux : public Coup {
 public:
-	Ciseaux();
-	virtual std::string type() const;
+	Ciseaux(Joueur*);
+	virtual std::string getType() const;
 	virtual ~Ciseaux();
+    static std::string type;
 };
 
 #endif /* CISEAUX_H_ */
